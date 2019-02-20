@@ -25,11 +25,11 @@ function onOpen(event) {
   var boundDocId = boundDoc.getId()
   var menu = ui.createMenu('CloudFire')
 
-  if      (Config.get('ANNOUNCEMENTS_MASTER_SUNDAY_ID') === boundDocId) { master()    }
-  else if (Config.get('ANNOUNCEMENTS_0WEEKS_SUNDAY_ID') === boundDocId) { zeroWeeks() }
-  else if (Config.get('ANNOUNCEMENTS_1WEEK_SUNDAY_ID') === boundDocId)  { oneWeek()   }
-  else if (Config.get('ANNOUNCEMENTS_2WEEKS_SUNDAY_ID') === boundDocId) { twoWeeks()  }
-  else if (Config.get('ANNOUNCEMENTS_ARCHIVE_ID') === boundDocId)       { archive()   }
+//  if      (Config.get('ANNOUNCEMENTS_MASTER_SUNDAY_ID') === boundDocId) { master()    }
+//  else if (Config.get('ANNOUNCEMENTS_0WEEKS_SUNDAY_ID') === boundDocId) { zeroWeeks() }
+//  else if (Config.get('ANNOUNCEMENTS_1WEEK_SUNDAY_ID') === boundDocId)  { oneWeek()   }
+    if (Config.get('ANNOUNCEMENTS_2WEEKS_SUNDAY_ID') === boundDocId) { twoWeeks()  }
+//  else if (Config.get('ANNOUNCEMENTS_ARCHIVE_ID') === boundDocId)       { archive()   }
   else { throw new Error('This GDoc is not supported by the add-on') }
   
   menu.addToUi()
@@ -76,7 +76,7 @@ function onOpen(event) {
   function twoWeeks() {
   
     menu
-      .addItem('Invite Staff Sponsors to Comment', 'sendMailFunction')
+      .addItem('Invite Staff Sponsors to Comment', 'inviteStaffSponsorsToComment')
       .addSeparator()
       .addItem('Rotate Content', 'rotateContent')
       .addSeparator()
@@ -133,7 +133,7 @@ function format_removeEmptyParagraphs()         {Announcements.format_removeEmpt
 // 2 Weeks
 // -------
 
-function sendMailFunction()                 {Announcements.sendMailFunction()}
+function inviteStaffSponsorsToComment()     {Announcements.inviteStaffSponsorsToComment()}
 function rotateContent()                    {Announcements.rotateContent()}
 // function moveSlides()                       {Announcements.moveSlides()} // 0 Weeks
 function reorderParagraphs()                {Announcements.reorderParagraphs()}

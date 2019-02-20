@@ -1,15 +1,19 @@
 {
   "timeZone": "Europe/London",
   "dependencies": {
+    "enabledAdvancedServices": [{
+      "userSymbol": "Drive",
+      "serviceId": "drive",
+      "version": "v2"
+    }],
     "libraries": [{
+      "userSymbol": "Announcements",
+      "libraryId": "1kxAFGTA8W7RrWzs-MxIEjHz3Q85yF_BH5kcaWk_K9sjOICcI7JkmxHmy",
+      "version": "5"
+    }, {
       "userSymbol": "Config",
       "libraryId": "1oO44r3nax5MO1XsI1hlr4ZM0OtPVCQKgDYUe08ej_SkIKn9uvzZ6WKQl",
       "version": "10"
-    }, {
-      "userSymbol": "Announcements",
-      "libraryId": "1kxAFGTA8W7RrWzs-MxIEjHz3Q85yF_BH5kcaWk_K9sjOICcI7JkmxHmy",
-      "version": "3",
-      "developmentMode": true
     }]
   },
   "exceptionLogging": "STACKDRIVER"
